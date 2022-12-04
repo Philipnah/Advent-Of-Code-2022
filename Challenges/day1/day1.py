@@ -4,7 +4,7 @@ def partOne():
 	maxCalorieElf = 0
 	currentElf = 0
 
-	with open("/Users/philip/Desktop/Git/Advent-Of-Code-2022/Challenges/day1/input.txt", "r") as file:
+	with open("input.txt", "r") as file:
 		for line in file:
 			if line == "\n":
 				if currentElf > maxCalorieElf:
@@ -31,7 +31,7 @@ def partTwo():
 	maxCalorieElves = [0, 0, 0]
 	currentElf = 0
 
-	with open("/Users/philip/Desktop/Git/Advent-Of-Code-2022/Challenges/day1/input.txt", "r") as file:
+	with open("input.txt", "r") as file:
 		for line in file:
 			if line == "\n":
 				if currentElf > min(maxCalorieElves):

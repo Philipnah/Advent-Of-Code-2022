@@ -73,7 +73,7 @@ def secondPartCalculate(line):
 	return result
 
 def partOne():
-	with open("/Users/philip/Desktop/Git/Advent-Of-Code-2022/Challenges/day2/input.txt", "r") as file:
+	with open("input.txt", "r") as file:
 		score = 0
 		for line in file:
 			score = score + CalculateScore(line)
@@ -82,7 +82,7 @@ def partOne():
 
 
 def partTwo():
-	with open("/Users/philip/Desktop/Git/Advent-Of-Code-2022/Challenges/day2/input.txt", "r") as file:
+	with open("input.txt", "r") as file:
 		score = 0
 		for line in file:
 			score = score + secondPartCalculate(line)
