@@ -1,29 +1,18 @@
-def func():
-	with open("/Users/philip/Desktop/Git/Advent-Of-Code-2022/Challenges/day6/input.txt", "r") as file:
+def main(amountOfCharacters):
+	with open("Challenges/day6/input.txt", "r") as file:
 		allCharacters = file.read()
-
 		characterBuffer = []
-		for i in range(0, len(allCharacters)):
-			#print(characterBuffer)
-			
-			if len(characterBuffer) < 4:
-				characterBuffer.append(allCharacters[i])
-			else:
-				if allCharacters[i] in characterBuffer:
-					characterBuffer = shiftArray(characterBuffer)
-					characterBuffer.append(allCharacters[i])
+
+		for counter in range(0, len(allCharacters)):
+			if len(characterBuffer) >= amountOfCharacters:
+				if checkAllCharacters(characterBuffer):
+					print(counter)
+					break
 				else:
-					if checkAllCharacters(characterBuffer):
-						print(i)
-						print(allCharacters[i])
-						print(characterBuffer)
-						break
-					else:
-						characterBuffer = shiftArray(characterBuffer)
-						characterBuffer.append(allCharacters[i])
+					characterBuffer = shiftArray(characterBuffer)
+			
+			characterBuffer.append(allCharacters[counter])
 				
-
-
 
 def shiftArray(array):
 	returnedArray = []
@@ -41,4 +30,9 @@ def checkAllCharacters(array):
 	
 	return True
 
-func()
+
+print("\nAnswer part 1: ")
+main(4)
+
+print("\nAnswer part 2: ")
+main(14)
