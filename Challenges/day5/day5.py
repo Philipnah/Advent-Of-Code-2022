@@ -8,8 +8,6 @@
 # [R] [H] [Z] [M] [T] [M] [T] [Q] [W]
 #  1   2   3   4   5   6   7   8   9 
 
-# TODO strip every element of the combined list
-
 
 def split3(string):
 	return [string[i:i+4] for i in range(0, len(string), 4)]
